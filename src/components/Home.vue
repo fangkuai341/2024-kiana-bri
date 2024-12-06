@@ -3,7 +3,7 @@
     <div
       class="grid"
       :style="{
-        height: `85vh`,
+        height: `95vh`,
         width: `${gridWidth}px`,
         gridTemplateRows: `repeat(${rows}, 1fr)`,
         gridTemplateColumns: `repeat(${cols}, 1fr)`,
@@ -82,7 +82,7 @@ const textareaDisabled = ref(false);
 const blocks = reactive([]);
 const imageWidth = ref(0); // 原始图片宽度
 const imageHeight = ref(0); // 原始图片高度
-const gridHeight = 0.85 * window.innerHeight; // 网格高度为 85vh
+const gridHeight = 0.95 * window.innerHeight; // 网格高度为 85vh
 
 // 动态计算网格宽度，保持图片宽高比
 const gridWidth = computed(() => {
@@ -110,6 +110,7 @@ const initializeBlocks = (colorBlocks = []) => {
 
 // 获取每个块的样式
 const getBlockStyle = (block) => {
+  debugger;
   const blockWidth = gridWidth.value / cols;
   const blockHeight = gridHeight / rows;
   return {
